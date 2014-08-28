@@ -1,4 +1,4 @@
 ScienceUncovered
 ================
 
-Digitisation workflow for Science Uncovered
+Digitisation workflow for Science Uncovered.
