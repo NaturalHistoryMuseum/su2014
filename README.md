@@ -50,6 +50,8 @@ The transcription app will only
 
 [#6](/../../issues/6) Set up twitter account to use. 
 
+[#9](/../../issues/9) Live count of transcriptions. Big number going up.
+
 The transcription app will only be accessible within the Museum network.
 
 [#7](/../../issues/7) Use data portal dev VM. Ensure is viewable on wifi network.
