@@ -59,7 +59,7 @@ Step 3: Data Portal
 
 The data will be live pushed to the data portal, providing entry point to discuss the Data Portal.
 
-[#8](/../../issues/8) Set up local Data Portal, so is not accessible on Museum-wide network.
+[#8](/../../issues/8) We will need a local Data Portal to demo, so not accesssible on Museum-wide network.
 
 
 
