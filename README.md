@@ -45,6 +45,7 @@ Transcription tool requirements:
 The transcription app will only  
 
 [#4](/../../issues/4) We will need at least two iPads.
+
 [#5](/../../issues/5) Build transcription app
 
 
