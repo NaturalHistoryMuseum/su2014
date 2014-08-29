@@ -17,9 +17,9 @@ Coleoptera curators taking images of Coleoptera and Hemiptera specimens.
 
 Image requirements:
 
-  ** Each photo should be of an individual specimen
-  ** Each photo should have at least one transcribable label
-  ** Photos should be added to flickr group SU2014
+  * Each photo should be of an individual specimen
+  * Each photo should have at least one transcribable label
+  * Photos should be added to flickr group SU2014
   
 
   
