@@ -21,7 +21,9 @@ Image requirements:
   * Each photo should have at least one transcribable label
   * Photos should be added to flickr group SU2014
   
-The specimen images are a good draw and throughput can be continuous - so use the big screen to display a visualisation of images added to the photostream.  This should be live and dynamic - mounted at hight behind the display. [#1]
+The specimen images are a good draw and throughput can be continuous - so use the big screen to display a visualisation of images added to the photostream.  This should be live and dynamic - mounted at height behind the display. [#1](/../../issues/1)
+
+
 
 
   
