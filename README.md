@@ -23,7 +23,7 @@ Image requirements:
   
 The specimen images are a good draw and throughput can be continuous - so use the big screen to display a visualisation of images added to the photostream.  This should be live and dynamic - mounted at height behind the display. [#1](/../../issues/1)
 
-For the visualisation to work well, the images from the digitsation process should be added to flickr as they are created. Need a process in place to do this. [#2](/../../issues/2) 
+For the visualisation to work well, the images from the digitsation process should be added to flickr as they are created. Need a pipeline to do this. [#2](/../../issues/2) 
 
 
   
