@@ -48,6 +48,18 @@ The transcription app will only
 
 [#5](/../../issues/5) Build transcription app
 
+[#6](/../../issues/6) Set up twitter account to use. 
+
+The transcription app will only be accessible within the Museum network.
+
+[#7](/../../issues/7) Use data portal dev VM. Ensure is viewable on wifi network.
+
+Step 3: Data Portal
+-------------------
+
+The data will be live pushed to the data portal, providing entry point to discuss the Data Portal.
+
+[#8](/../../issues/8) Set up local Data Portal, so is not accessible on Museum-wide network.
 
 
 
