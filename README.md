@@ -10,8 +10,8 @@ Workflow
 
 
 
-Step 1: Digitsation
--------------------
+Step 1: Digitisation
+--------------------
 
 Coleoptera curators taking images of Coleoptera and Hemiptera specimens.
 
