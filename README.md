@@ -42,8 +42,10 @@ Transcription tool requirements:
   * If on their phone: "I have just  transcribed @nhm_london specimen [linkto flickr photo] #su2014"
   * If using our iPad, tweet will be from @su2014 twitter account ".@username has just transcribed @nhm_london specimen [linkto flickr photo] #su201"
 
+The transcription app will only  
 
-
+[#4](/../../issues/4) We will need at least two iPads.
+[#5](/../../issues/5) Build transcription app
 
 
 
