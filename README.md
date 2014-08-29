@@ -40,7 +40,7 @@ Transcription tool requirements:
  * After a label has been transcribe 3 times, it will be greyed out so user has to select another area. 
  * After label entry is submitted, the user will be encouraged to send a tweet.
   * If on their phone: "I have just  transcribed @nhm_london specimen [linkto flickr photo] #su2014"
-  * If using iPad, will tweet from @su2014 twitter account ".@username has just transcribed @nhm_london specimen [linkto flickr photo] #su201"
+  * If using our iPad, tweet will be from @su2014 twitter account ".@username has just transcribed @nhm_london specimen [linkto flickr photo] #su201"
 
 
 
