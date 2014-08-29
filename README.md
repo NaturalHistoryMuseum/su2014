@@ -28,17 +28,13 @@ Image requirements:
 [#3](/../../issues/3) Preload images into the flickr group SU2014. 
 
   
-  
-  
+
+Step 2: Transcription
+---------------------
+
+Public will be asked to transcribe specimen labels, created in step 1.
 
 
-
-
-Stand 1: Digitsation
---------------------
-
-
-Images will be pulled from flickr group SU2014.
 
 
 
