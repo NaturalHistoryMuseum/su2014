@@ -32,7 +32,16 @@ Image requirements:
 Step 2: Transcription
 ---------------------
 
-Public will be asked to transcribe specimen labels, created in step 1.
+Visitors will transcribe the specimen labels created in step 1.
+
+Transcription tool requirements:
+
+ * Specimens have multiple labels. Users will draw a shape around a label. A text box will then appear, to enter the label value.
+ * After a label has been transcribe 3 times, it will be greyed out so user has to select another area. 
+ * After label entry is submitted, the user will be invited to enter their twitter handle. 
+
+
+
 
 
 
