@@ -38,7 +38,7 @@ Transcription tool requirements:
 
  * Specimens have multiple labels. Users will draw a shape around a label. A text box will then appear, to enter the label value.
  * After a label has been transcribe 3 times, it will be greyed out so user has to select another area. 
- * After label entry is submitted, the user will be invited to enter their twitter handle. 
+ * After label entry is submitted, the user will be invited to enter their twitter handle. We will send a tweet from the @su2014 twitter account: .@username has just transcribed @nhm_london specimen [linkto flickr photo] #su2014
 
 
 
