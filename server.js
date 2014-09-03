@@ -15,10 +15,8 @@
 
     mongoose.connect(db.url); // connect to our mongoDB database (uncomment after you enter in your own credentials in config/db.js)
 
-    // Load all models
-    fs.readdirSync(__dirname + '/models').forEach(function(filename){
-        if(~filename.indexOf('.js')) require(__dirname + '/models/' + filename)
-    });
+    // Models =================
+    require('./app/models/images')
 
     // get all data/stuff of the body (POST) parameters
     app.use(bodyParser.json()); // parse application/json
@@ -29,8 +27,8 @@
     app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
     // routes ==================================================
-    require('./routes/image')(app);
-    require('./routes/index')(app);
+    require('./app/routes/image')(app);
+    require('./app/routes/index')(app);
 
     // start app ===============================================
     app.listen(port);										// startup our app at http://localhost:8080
