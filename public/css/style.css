@@ -1,0 +1,31 @@
+body{
+    background: #FFFEFE;
+}
+
+div.highlight{
+    padding: 20px;
+    color: inherit;
+    background-color: #eee;
+    min-height: 100%;
+}
+
+.page-header{
+    margin: 0;
+}
+
+.page-header img.logo{
+    float: left;
+}
+
+.page-header h4{
+    margin-left: 45px;
+}
+
+.btn-toolbar{
+    margin-top: 30px;
+}
+
+.jumbotron{
+    width: 50%;
+    margin-top: 50px;
+}

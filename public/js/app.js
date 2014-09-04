@@ -1,1 +1,1 @@
-angular.module('su2014App', ['ngRoute', 'appRoutes', 'ImageController']);
+angular.module('su2014App', ['ngRoute', 'appRoutes', 'ThanksController', 'SpecimenController']);
