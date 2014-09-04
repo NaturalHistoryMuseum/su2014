@@ -2,30 +2,32 @@ body{
     background: #FFFEFE;
 }
 
-div.highlight{
-    padding: 20px;
-    color: inherit;
-    background-color: #eee;
+img#specimen{
+    max-width: 100%;
     min-height: 100%;
+    padding-bottom: 141px; /* Create space for question bar */
+    margin: auto;
 }
 
-.page-header{
-    margin: 0;
+div#footer{
+    position: fixed;
+    bottom: 0;
+    height: 120px;
+    background: #eee;
+    width: 100%;
 }
 
-.page-header img.logo{
-    float: left;
+form#transcription{
+    margin-top: 36px;
 }
 
-.page-header h4{
-    margin-left: 45px;
+form#transcription label{
+    display: block;
+    text-align: right;
+    font-size: 30px;
 }
 
-.btn-toolbar{
-    margin-top: 30px;
+#branding{
+    width: 50px;
 }
 
-.jumbotron{
-    width: 50%;
-    margin-top: 50px;
-}

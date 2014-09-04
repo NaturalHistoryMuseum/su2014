@@ -1,47 +1,32 @@
 
 <div class="row">
-    <div class="col-xs-8">
-        <img class="img-responsive" src="{{ specimen.url }}"/>
+    <div class="col-xs-12">
+        <img id="specimen" class="img-responsive" src="{{ specimen.url }}"/>
     </div>
-    <div class="col-xs-4">
-        <div class="highlight">
+</div>
 
-            <div class="page-header">
-                <img class="logo" src="img/logo-black.png" title="Natural History Museum" />
-                <h4>Digitising the Collection <br /><small>Science Uncovered 2014</small></h4>
-            </div>
-
-            <p>Please enter as much information as you can make out on the specimen label.</p>
-            <p>If you can't read it or some information is missing, please leave the field blank - that's very useful to know too!</p>
-
-            <form>
-
-                <div class="form-group">
-                    <label for="scientific-name">Scientific name:</label>
-                    <input id="scientific-name" type="text" class="form-control" placeholder="Scientific name" ng-model="formData.scientificName">
-                </div>
-
-                <div class="form-group">
-                    <label for="location">Location:</label>
-                    <textarea id="location" class="form-control" rows="3" placeholder="Where was this specimen found?" ng-model="formData.location"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="type-status">Type status:</label>
-                    <select class="form-control" id="type-status" ng-model="formData.typeStatus">
-                      <option></option>
-                      <option>Type</option>
-                      <option>Syntype</option>
-                      <option>Lectotype</option>
-                    </select>
-                </div>
-
-                <div class="btn-toolbar">
-                    <button type="submit" class="btn btn-primary btn-lg" ng-click="saveTranscription()"><span class="glyphicon glyphicon-ok"></span> Save transcription</button>
-                    <button type="submit" class="btn btn-warning btn-lg pull-right" ng-click="skip()">Skip</button>
-                </div>
-            </form>
-
+<div id="footer" class="row">
+    <form id="transcription">
+        <div class="col-xs-1">
+            <p id="branding">
+                <img class="logo" src="img/logo-black.png" title="Natural History Museum" /><br />#SU14
+            </p>
         </div>
-    </div>
+
+        <div class="col-xs-2">
+           <label for="{{ field }}">{{ label }}:</label>
+        </div>
+
+        <div class="col-xs-6">
+            <input id="{{ field }}" type="text" class="form-control input-lg" placeholder="{{ placeholder }}" ng-model="formData.parameters[field]">
+        </div>
+
+        <div class="col-xs-3">
+           <div class="btn-toolbar">
+                <button type="submit" class="btn btn-primary btn-lg" ng-click="saveTranscription()"><span class="glyphicon glyphicon-ok"></span> Save {{ label }}</button>
+                <button type="submit" class="btn btn-warning btn-lg pull-right" ng-click="skip()">Missing / illegible</button>
+           </div>
+        </div>
+
+    </form>
 </div>
