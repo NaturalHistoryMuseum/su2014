@@ -9,4 +9,6 @@ http://stackoverflow.com/questions/13671031/server-polling-with-angularjs
 
 Sending tweets:  http://stackoverflow.com/questions/10424275/how-can-i-open-a-twitter-tweet-using-the-native-twitter-app-on-ios
 
+http://blog.joeandrieu.com/2012/01/30/the-worlds-simplest-autotweeter-in-node-js/
+
 
