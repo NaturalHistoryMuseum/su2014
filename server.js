@@ -16,7 +16,7 @@
     mongoose.connect(db.url); // connect to our mongoDB database (uncomment after you enter in your own credentials in config/db.js)
 
     // Models =================
-    require('./app/models/images')
+    require('./app/models/specimens')
 
     // get all data/stuff of the body (POST) parameters
     app.use(bodyParser.json()); // parse application/json
@@ -27,10 +27,10 @@
     app.use(express.static(__dirname + '/public')); // set the static files location /public/img will be /img for users
 
     // routes ==================================================
-    require('./app/routes/image')(app);
+    require('./app/routes/specimens')(app);
     require('./app/routes/index')(app);
 
     // start app ===============================================
     app.listen(port);										// startup our app at http://localhost:8080
-    console.log('Magic happens on port ' + port); 			// shoutout to the user
+    console.log('Serving on port ' + port); 			// shoutout to the user
     exports = module.exports = app;
