@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 
 module.exports = function(app) {
 
-    // Load a random specimen
+    // Get one specimen
 
     function load_random_specimen(req, res){
 
