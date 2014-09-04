@@ -67,7 +67,7 @@ def import_flickr_images():
             # TODO: Create local cache of images for non-wifi users?
 
             record = dict(
-                _id=photo['id']
+                _id=int(photo['id'])
             )
 
             # Not all photos have url_l - if not use the original
