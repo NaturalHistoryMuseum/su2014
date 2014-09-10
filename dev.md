@@ -11,4 +11,6 @@ Sending tweets:  http://stackoverflow.com/questions/10424275/how-can-i-open-a-tw
 
 http://blog.joeandrieu.com/2012/01/30/the-worlds-simplest-autotweeter-in-node-js/
 
+http://www.notesfromnature.org/#/archives/calbug/transcribe
+
 
