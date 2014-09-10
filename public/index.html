@@ -1,32 +1,39 @@
 <!-- public/index.html -->
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-	<base href="/">
 
-	<title>Science Uncovered 2014</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
 
-	<!-- CSS -->
-	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+        <title>Science Uncovered 2014</title>
 
-	<!-- JS -->
-	<script src="libs/angular/angular.min.js"></script>
-	<script src="libs/angular-route/angular-route.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
 
-	<!-- ANGULAR CUSTOM -->
-	<script src="js/app.js"></script>
+        <!-- JS -->
+        <script src="libs/angular/angular.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
 
-</head>
-<body ng-app="su2014App">
+        <!-- ANGULAR CUSTOM -->
+        <script src="js/appStates.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/transcription.js"></script>
 
-    <div class="container-full">
-	    <!-- ANGULAR DYNAMIC CONTENT -->
-	    <div ng-view></div>
-    </div>
+    </head>
 
-</body>
+    <body ng-app="su2014App" ng-controller="transcriptionController">
+
+        <div id="branding"><img class="logo" src="img/logo-black.png" title="Natural History Museum" />Science Uncovered</div>
+
+        <a id="skip" href="/" ng-click="reload()">Skip &raquo;</a>
+
+        <div class="container-full">
+            <div ui-view></div>
+        </div>
+
+    </body>
+
 </html>

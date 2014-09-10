@@ -1,1 +1,2 @@
-angular.module('su2014App', ['ui.router']);
+angular.module('su2014App', ['ui.router', 'appStates', 'transcriptionController']);
+
