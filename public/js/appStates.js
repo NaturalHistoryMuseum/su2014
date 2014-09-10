@@ -1,22 +1,42 @@
 angular.module('appStates', []).config(function($stateProvider, $urlRouterProvider) {
 
-	$stateProvider
+    var states = [
+        {
+            name: 'transcribe.name',
+            url: '/name',
+            data: {
+                label: 'Scientific name'
+            }
+        },
+        {
+            name: 'transcribe.location',
+            url: '/location',
+            data: {
+                label: 'Location'
+            }
+        }
+    ]
 
-		.state('transcribe', {
-			templateUrl: 'partials/transcribe.html',
-            controller: 'transcriptionController'
-		})
+    steps = []
 
-		// nested states
-		.state('transcribe.name', {
-			url: '/name',
-			templateUrl: 'partials/transcribe.name.html'
-		})
+    // And add the main states
+    angular.forEach(states, function (state) {
+        $stateProvider.state(state.name, state);
+        steps.push({
+            'name': state.name,
+            'label': state.data.label
+        })
+    });
 
-		.state('transcribe.location', {
-			url: '/location',
-			templateUrl: 'partials/transcribe.location.html'
-		})
+
+    // Add default state
+    $stateProvider.state('transcribe', {
+        templateUrl: 'partials/transcribe.html',
+        controller: 'transcriptionController',
+        resolve: {
+            formObj: 'hello'
+        }
+    })
 
 	// catch all route
 	// send users to the transcription page

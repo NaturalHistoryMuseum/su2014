@@ -1,2 +1,2 @@
-angular.module('su2014App', ['ui.router', 'appStates', 'transcriptionController']);
+angular.module('su2014App', ['mgo-angular-wizard', 'transcriptionController']);
 

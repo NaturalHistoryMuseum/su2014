@@ -1,4 +1,4 @@
-angular.module('transcriptionController', []).controller('transcriptionController', function($scope, $http, $state) {
+angular.module('transcriptionController', []).controller('transcriptionController', function($scope, $http) {
 
     // TODO: On refresh, home
 
@@ -11,8 +11,17 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
             console.log('Error: ' + data);
         });
 
-    $scope.reload = function(){
-        $state.go($state.$current, null, { reload: true });
-    }
+//    $scope.reload = function(){
+//        $state.go($state.$current, null, { reload: true });
+//    }
+//
+//    $scope.$on('$stateChangeStart', function(event, toState){
+//        // TODO: This is called twice!
+//        console.log("STATE");
+//
+//        $scope.data = toState.data;
+////        event.preventDefault();
+//    })
+
 
 });
