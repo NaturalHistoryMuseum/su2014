@@ -1,2 +1,10 @@
-angular.module('su2014App', ['mgo-angular-wizard', 'transcriptionController']);
+angular.module('su2014App', [
+    'ngRoute',
+    'appRoutes',
+    'mgo-angular-wizard',
+    'ui.bootstrap',
+    'transcriptionController',
+    'twitterController',
+    'modalHelpController'
+]);
 

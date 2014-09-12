@@ -8,8 +8,8 @@ body{
     top: 10px;
     left: 10px;
     text-align: center;
-    line-height: 1;
-    opacity: 0.6;
+    line-height: 1.1;
+    /*opacity: 0.6;*/
 }
 
 #branding img{
@@ -18,34 +18,41 @@ body{
 
 a#skip{
     position: absolute;
-    top: 40%;
-    left: 0;
+    top: 35%;
+    right: 0;
     z-index: 1000;
     background: rgba(0,0,0,0.7);
     color: #fff;
-    padding: 5px;
-    font-size: 18px;
+    padding: 5px 5px 5px 10px;
+    font-size: 30px;
+}
+
+a#skip:hover{
+    color: #CBCBCB;
+    padding-right: 8px;
 }
 
 div#specimen img{
     height: auto;
     max-height: 100%;
+    min-height: 100%;
     max-width: 100%;
-    padding-bottom: 125px;
+    padding-bottom: 140px;
     margin: auto;
 }
 
 div#footer{
     position: fixed;
     bottom: 0;
-    height: 120px;
+    height: 140px;
     background: #eee;
     width: 100%;
     margin: 0;
+    border-top: 1px solid #fff;
 }
 
 form#transcription{
-    margin-top: 36px;
+    margin-top: 24px;
 }
 
 form#transcription label{
@@ -54,5 +61,95 @@ form#transcription label{
     font-size: 30px;
 }
 
+/* Steps */
+
+button i{
+    margin-right: 4px;
+}
+
+.steps-indicator {
+    background: #E9E9E9;
+    border-top: 1px solid #fff;
+    height: 45px!important;
+}
+
+.steps-indicator li{
+    line-height: 19px!important;
+}
+
+.steps-indicator li a {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 28px;
+    /*padding-top: 4px!important;*/
+}
+
+.steps-indicator li a:before {
+    left: calc(48%)!important;
+    height: 15px!important;
+    width: 15px!important;
+    border: 1px solid #fff;
+}
+
+.steps-indicator li.current a,
+.steps-indicator li.editing a{
+    color: #626262;
+}
+
+.steps-indicator li.current a:before,
+.steps-indicator li.editing a:before{
+    background-color: #339933!important;
+}
+
+.steps-indicator li.done a:before {
+    background: none!important;
+    content: "\f058";
+    font-family: FontAwesome;
+    font-weight: lighter;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 16px;
+    color: #339933!important;
+    height: 16px!important;
+    width: 16px!important;
+}
 
 
+/* Twitter */
+
+div.twitter{
+    width: 40%;
+}
+
+div.twitter h1{
+    margin: 0 0 20px 0;
+}
+
+div.twitter form{
+    background: #E5E5E5;
+    padding: 20px;
+    margin: 40px 0 40px 0;
+}
+
+div.twitter form label{
+    font-size: 18px;
+}
+
+div.twitter form .form-group input{
+    margin: 0 10px;
+    width: 370px;
+}
+
+div.twitter form p{
+    font-size: 18px;
+}
+
+.btn-xlg, .btn-group-xlg>.btn {
+padding: 14px 20px;
+font-size: 22px;
+line-height: 1.33;
+border-radius: 9px;
+}
