@@ -28,6 +28,7 @@
 
     // routes ==================================================
     require('./app/routes/specimens')(app);
+    require('./app/routes/twitter')(app);
     require('./app/routes/index')(app);
 
     // start app ===============================================
