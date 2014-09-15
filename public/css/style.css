@@ -20,17 +20,20 @@ body{
 a#skip{
     position: absolute;
     top: 35%;
-    right: 0;
+    right: 8px;
     z-index: 1000;
-    background: rgba(0,0,0,0.7);
-    color: #fff;
-    padding: 5px 5px 5px 10px;
-    font-size: 30px;
+
 }
 
-a#skip:hover{
-    color: #CBCBCB;
-    padding-right: 8px;
+a#skip i{
+    color: #000000;
+    opacity: 0.6;
+    font-size: 40px;
+    width: 40px;
+}
+
+a#skip:hover i{
+    opacity: 0.8;
 }
 
 div#specimen img{
@@ -65,7 +68,7 @@ form#transcription label{
 /* Help text */
 
 form#transcription label i{
-    font-size: 20px;
+    font-size: 24px;
     color: #3476BE;
     position: relative;
     top: -12px;
@@ -132,7 +135,8 @@ button i{
 /* Twitter */
 
 div.twitter{
-    width: 40%;
+    width: 50%;
+    max-width: 600px;
 }
 
 div.twitter h1{
@@ -151,7 +155,6 @@ div.twitter form label{
 
 div.twitter form .form-group input{
     margin: 0 10px;
-    width: 370px;
 }
 
 div.twitter form p{

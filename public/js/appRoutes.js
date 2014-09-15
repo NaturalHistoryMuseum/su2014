@@ -10,7 +10,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'partials/twitter.html',
 			controller: 'twitterController'
 		})
-        .otherwise({redirectTo: "/"})
+//        .otherwise({redirectTo: "/"})
 
 	$locationProvider.html5Mode(true);
 

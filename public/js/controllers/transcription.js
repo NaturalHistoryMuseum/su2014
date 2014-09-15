@@ -1,4 +1,4 @@
-angular.module('transcriptionController', []).controller('transcriptionController', function($scope, $http, $route, $location) {
+angular.module('transcriptionController', []).controller('transcriptionController', function($scope, $http, $route, $modal) {
 
     // Form placeholder
     $scope.formData = {};
@@ -18,20 +18,28 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
 
     $scope.saveTranscription = function(){
 
-        // Set the specimen ID
-        $scope.formData['_id'] = $scope.specimen['_id']
+//        // Set the specimen ID
+//        $scope.formData['_id'] = $scope.specimen['_id']
+//
+//        // And post the data back to the node API
+//		$http.post('/api/specimen', $scope.formData)
+//			.success(function(data) {
+//                console.log('Success: record saved');
+//			})
+//			.error(function(data) {
+//                // We'll just log the error - on the night we do not want to reveal any errors
+//				console.log('Error: ' + data);
+//			});
 
-        // And post the data back to the node API
-		$http.post('/api/specimen', $scope.formData)
-			.success(function(data) {
-                console.log('Success: record saved');
-			})
-			.error(function(data) {
-                // We'll just log the error - on the night we do not want to reveal any errors
-				console.log('Error: ' + data);
-			});
+        // TODO: Pass in id/url
+        // TODO: Get twitter working first before moving to modal
 
-        $location.path('/thank-you/' + $scope.specimen['_id']);
+        $modal.open({
+          templateUrl: '/partials/twitter.html',
+          controller: 'twitterController'
+        });
+
+//        $location.path('/thank-you/' + $scope.specimen['_id']);
 
     }
 

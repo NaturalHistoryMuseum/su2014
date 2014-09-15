@@ -1,4 +1,4 @@
-<a id="skip" href="/" ng-click="reload()"><i class="fa fa-chevron-right"></i></a>
+<a id="skip" href="/" ng-click="reload()"><i class="fa fa-chevron-circle-right"></i></a>
 
 <div id="specimen" class="row">
     <div class="col-xs-12">
@@ -12,90 +12,94 @@
 
         <wizard on-finish="saveTranscription()" current-step="step">
 
-            <!-- Identifier (BMNH) -->
-            <wz-step title="BM Number">
-                <div class="col-xs-3">
-                   <label for="identifier">BMNH(E) number: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>
-                </div>
+            <!--&lt;!&ndash; Identifier (BMNH) &ndash;&gt;-->
+            <!--<wz-step title="BM Number">-->
+                <!--<div class="col-xs-3">-->
+                   <!--<label for="identifier">BMNH(E) number: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>-->
+                <!--</div>-->
 
-                <div class="col-xs-6">
-                    <input id="identifier" type="text" class="form-control input-lg" ng-model="formData.identifier">
-                </div>
+                <!--<div class="col-xs-6">-->
+                    <!--<input id="identifier" type="text" class="form-control input-lg" ng-model="formData.identifier">-->
+                <!--</div>-->
 
-                <div class="col-xs-3">
-                   <div class="btn-toolbar">
-                       <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
-                   </div>
-                </div>
-            </wz-step>
+                <!--<div class="col-xs-3">-->
+                   <!--<div class="btn-toolbar">-->
+                       <!--<button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>-->
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</wz-step>-->
 
-            <!-- Scientific name -->
-            <wz-step title="Scientific name">
-                <div class="col-xs-3">
-                   <label for="name">Scientific name: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>
-                </div>
+            <!--&lt;!&ndash; Scientific name &ndash;&gt;-->
+            <!--<wz-step title="Scientific name">-->
+                <!--<div class="col-xs-3">-->
+                   <!--<label for="name">Scientific name: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>-->
+                <!--</div>-->
 
-                <div class="col-xs-6">
-                    <input id="name" type="text" class="form-control input-lg" ng-model="formData.name">
-                </div>
+                <!--<div class="col-xs-6">-->
+                    <!--<input id="name" type="text" class="form-control input-lg" ng-model="formData.name">-->
+                <!--</div>-->
 
-                <div class="col-xs-3">
-                   <div class="btn-toolbar">
-                       <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
-                   </div>
-                </div>
-            </wz-step>
+                <!--<div class="col-xs-3">-->
+                   <!--<div class="btn-toolbar">-->
+                       <!--<button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>-->
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</wz-step>-->
 
-            <!-- Locality -->
-            <wz-step title="Locality">
-                <div class="col-xs-3">
-                   <label for="name">Locality: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>
-                </div>
+            <!--&lt;!&ndash; Locality &ndash;&gt;-->
+            <!--<wz-step title="Locality">-->
+                <!--<div class="col-xs-3">-->
+                   <!--<label for="name">Locality: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>-->
+                <!--</div>-->
 
-                <div class="col-xs-6">
-                    <input id="locality" type="text" class="form-control input-lg" ng-model="formData.locality">
-                </div>
+                <!--<div class="col-xs-6">-->
+                    <!--<input id="locality" type="text" class="form-control input-lg" ng-model="formData.locality">-->
+                <!--</div>-->
 
-                <div class="col-xs-3">
-                   <div class="btn-toolbar">
-                       <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
-                   </div>
-                </div>
-            </wz-step>
+                <!--<div class="col-xs-3">-->
+                   <!--<div class="btn-toolbar">-->
+                       <!--<button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>-->
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</wz-step>-->
 
-            <!-- Type status -->
-            <wz-step title="Type status">
-                <div class="col-xs-3">
-                   <label for="type-status">Type status: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>
-                </div>
+            <!--&lt;!&ndash; Type status &ndash;&gt;-->
+            <!--<wz-step title="Type status">-->
+                <!--<div class="col-xs-3">-->
+                   <!--<label for="type-status">Type status: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>-->
+                <!--</div>-->
 
-                <div class="col-xs-6">
-                    <input id="type-status" type="text" class="form-control input-lg" ng-model="formData.typeStatus">
-                </div>
+                <!--<div class="col-xs-6">-->
+                    <!--&lt;!&ndash; TODO: ng-multiple=""&ndash;&gt;-->
+                    <!--<select id="type-status" class="form-control input-lg" ng-model="formData.typeStatus">-->
+                        <!--<option value="Type">Type</option>-->
+                        <!--<option value="Syntype">Syntype</option>-->
+                    <!--</select>-->
+                <!--</div>-->
 
-                <div class="col-xs-3">
-                   <div class="btn-toolbar">
-                       <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
-                   </div>
-                </div>
-            </wz-step>
+                <!--<div class="col-xs-3">-->
+                   <!--<div class="btn-toolbar">-->
+                       <!--<button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>-->
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</wz-step>-->
 
-            <!-- Collector -->
-            <wz-step title="Collector">
-                <div class="col-xs-3">
-                   <label for="collector">Collector: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>
-                </div>
+            <!--&lt;!&ndash; Collector &ndash;&gt;-->
+            <!--<wz-step title="Collector">-->
+                <!--<div class="col-xs-3">-->
+                   <!--<label for="collector">Collector: <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i></label>-->
+                <!--</div>-->
 
-                <div class="col-xs-6">
-                    <input id="collector" type="text" class="form-control input-lg" ng-model="formData.collector">
-                </div>
+                <!--<div class="col-xs-6">-->
+                    <!--<input id="collector" type="text" class="form-control input-lg" ng-model="formData.collector">-->
+                <!--</div>-->
 
-                <div class="col-xs-3">
-                   <div class="btn-toolbar">
-                      <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
-                   </div>
-                </div>
-            </wz-step>
+                <!--<div class="col-xs-3">-->
+                   <!--<div class="btn-toolbar">-->
+                      <!--<button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>-->
+                   <!--</div>-->
+                <!--</div>-->
+            <!--</wz-step>-->
 
             <!-- Collection date -->
             <wz-step title="Collection date">
