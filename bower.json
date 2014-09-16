@@ -8,6 +8,7 @@
     "angular": "latest",
     "angular-route": "latest",
     "angular-wizard": "latest",
-    "angular-bootstrap": "latest"
+    "angular-bootstrap": "latest",
+    "angular-multi-select": "latest"
   }
 }
