@@ -16,7 +16,17 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
         $route.reload();
     }
 
+    $scope.typeStatuses = [
+        { name: "Type"},
+        { name: "Cotype"},
+        { name: "Holotype"},
+        { name: "Paratype"},
+        { name: "Syntype"}
+    ];
+
     $scope.saveTranscription = function(){
+
+        console.log($scope.specimen);
 
 //        // Set the specimen ID
 //        $scope.formData['_id'] = $scope.specimen['_id']
@@ -31,15 +41,15 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
 //				console.log('Error: ' + data);
 //			});
 
-        // TODO: Pass in id/url
-        // TODO: Get twitter working first before moving to modal
-
         $modal.open({
           templateUrl: '/partials/twitter.html',
-          controller: 'twitterController'
+          controller: 'twitterController',
+            resolve: {
+                specimen: function () {
+                    return $scope.specimen;
+                }
+            }
         });
-
-//        $location.path('/thank-you/' + $scope.specimen['_id']);
 
     }
 

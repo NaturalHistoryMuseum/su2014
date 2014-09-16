@@ -59,20 +59,58 @@ form#transcription{
     margin-top: 24px;
 }
 
-form#transcription label{
-    display: block;
+form#transcription .label-col{
+    text-align: right;
+}
+
+form#transcription .label-col label{
+    display: inline-block;
     text-align: right;
     font-size: 30px;
 }
 
 /* Help text */
-
-form#transcription label i{
+form#transcription .label-col i{
     font-size: 24px;
     color: #3476BE;
     position: relative;
     top: -12px;
+    left: 5px;
     cursor: pointer;
+}
+
+div.checkboxLayer{
+    bottom: 60px!important;
+}
+
+.multiSelect .button{
+    font-size: 18px!important;
+    min-width: 200px;
+    line-height: 1.33;
+    padding: 10px 16px!important;
+}
+
+.multiSelect .button .buttonLabel{
+    padding: 0 3px !important;
+}
+
+.multiSelect .multiSelectItem {
+    margin-bottom: 5px;
+    padding-top: 7px!important;
+}
+
+.multiSelect .checkBoxContainer{
+    padding: 5px 5px 0 5px!important;
+}
+
+.multiSelect .checkBoxContainer .multiSelectItem:hover,
+.multiSelect .checkBoxContainer .multiSelectGroup:hover {
+    background: #535353!important;
+}
+
+span.tickMark{
+    color: #4DAD49;
+    font-size: 16px!important;
 }
 
 /* Steps */
@@ -166,4 +204,7 @@ padding: 14px 20px;
 font-size: 22px;
 line-height: 1.33;
 border-radius: 9px;
+width: 40%;
+margin-top: 30px;
+margin-bottom: 30px;
 }

@@ -3,6 +3,7 @@ angular.module('su2014App', [
     'appRoutes',
     'mgo-angular-wizard',
     'ui.bootstrap',
+    'multi-select',
     'transcriptionController',
     'twitterController',
     'modalHelpController'

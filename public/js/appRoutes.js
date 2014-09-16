@@ -6,11 +6,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider', f
 			templateUrl: 'partials/transcribe.html',
 			controller: 'transcriptionController'
 		})
-        .when('/thank-you/:id', {
-			templateUrl: 'partials/twitter.html',
-			controller: 'twitterController'
-		})
-//        .otherwise({redirectTo: "/"})
+        .otherwise({redirectTo: "/"})
 
 	$locationProvider.html5Mode(true);
 

@@ -1,4 +1,4 @@
-angular.module('twitterController', []).controller('twitterController', function($scope, $http, $modalInstance) {
+angular.module('twitterController', []).controller('twitterController', function($scope, $http, $route, $modalInstance, specimen) {
 
     // Form placeholder
     $scope.formData = {};
@@ -6,6 +6,9 @@ angular.module('twitterController', []).controller('twitterController', function
     $scope.send = function() {
 
         // TODO: Validate the username?
+
+
+        $scope.formData['flickrURL'] = specimen.flickrURL;
 
         // And post the data back to the node API
 		$http.post('/tweet', $scope.formData)
@@ -17,10 +20,17 @@ angular.module('twitterController', []).controller('twitterController', function
 				console.log('Error: ' + data);
 			});
 
+        $modalInstance.close();
+
     }
 
-  $scope.close = function () {
-    $modalInstance.dismiss('cancel');
-  };
+    // Close button action
+    $scope.close = function () {
+        $modalInstance.close();
+    };
+
+    // When closed, reload the page
+    $modalInstance.result.then($route.reload, $route.reload)
+
 
 });
