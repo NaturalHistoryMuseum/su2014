@@ -49,7 +49,7 @@ def import_flickr_images():
         nojsoncallback=1,
         per_page=FLICKR_PER_PAGE,
         page=current_page,
-        extras='url_l, url_o'
+        extras='url_l, url_o, path_alias'
     ))
 
     bulk = db_collection.initialize_unordered_bulk_op()
@@ -64,10 +64,9 @@ def import_flickr_images():
 
         if photo['id'] not in existing_images:
 
-            # TODO: Create local cache of images for non-wifi users?
-
             record = dict(
-                _id=int(photo['id'])
+                _id=int(photo['id']),
+                flickrURL='http://www.flickr.com/photos/' + photo['pathalias'] + '/' + photo['id']
             )
 
             # Not all photos have url_l - if not use the original
@@ -79,6 +78,8 @@ def import_flickr_images():
             # Find and replace doc - inserting if it doesn't exist
             # This should never happen but we want to make sure
             bulk.find({'_id': record['_id']}).upsert().replace_one(record)
+
+            count += 1
 
     if count:
         bulk.execute()
