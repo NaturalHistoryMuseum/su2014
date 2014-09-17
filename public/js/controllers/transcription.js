@@ -1,4 +1,4 @@
-angular.module('transcriptionController', []).controller('transcriptionController', function($scope, $http, $route, $modal) {
+angular.module('transcriptionController', []).controller('transcriptionController', function($scope, $http, $route, $modal, $cookies) {
 
     // Form placeholder
     $scope.formData = {};

@@ -1,12 +1,11 @@
-angular.module('twitterController', []).controller('twitterController', function($scope, $http, $route, $modalInstance, specimen) {
+angular.module('twitterController', []).controller('twitterController', function($scope, $http, $route, $modalInstance, specimen, $cookies) {
 
     // Form placeholder
     $scope.formData = {};
 
+    $scope.informaticiansAuthName = ($cookies.username == 'informaticians');
+
     $scope.send = function() {
-
-        // TODO: Validate the username?
-
 
         $scope.formData['flickrURL'] = specimen.flickrURL;
 

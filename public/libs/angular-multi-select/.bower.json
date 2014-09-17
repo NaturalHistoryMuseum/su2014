@@ -19,7 +19,6 @@
     "commit": "c6b6d50f88c66cfe00941dc821b96002c998b074"
   },
   "_source": "git://github.com/isteven/angular-multi-select.git",
-  "_target": "~2.0.1",
-  "_originalSource": "angular-multi-select",
-  "_direct": true
+  "_target": "*",
+  "_originalSource": "angular-multi-select"
 }

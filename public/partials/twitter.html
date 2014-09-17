@@ -1,47 +1,43 @@
-<!--<div class="row">-->
 
-<!--<div class="col-xs-12">-->
+<div class="twitter">
 
-<!--<div class="jumbotron center-block twitter">-->
+    <div class="modal-header">
+        <h1 class="modal-title">Thank you!</h1>
+    </div>
+    <div class="modal-body">
 
-<!--<h1>Thank you!</h1>-->
+        <h3>Thank you for contributing. Your transcription will help scientists and the public use our collections, and further our understanding of the natural world.</h3>
 
+        <div ng-switch on="informaticiansAuthName">
 
-<!--<div class="text-center">-->
-<!---->
-<!--</div>-->
+            <div ng-switch-when="true">
 
+                <!-- Send a tweet from the informatics initiative-->
 
-<!--</div>-->
+                <form role="form" class="form-inline jumbotron" ng-submit="twitterform.$valid && send()" name="twitterform">
 
-<!--</div>-->
+                    <p>Please enter your twitter name below to receive a thank you tweet (and help spread the word about our work).</p>
 
-<!--</div>-->
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <!--autocomplete="off" -->
+                        <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Your twitter username" ng-model="formData.username" ng-minlength="2" ng-maxlength="20" required ng-pattern="/^\@([a-zA-Z0-9])+/">
+                    </div>
 
+                    <button type="submit" class="btn btn-primary btn-lg" ng-disabled="twitterform.$invalid"><i class="fa fa-twitter"></i> Tweet me</button>
 
-<div class="modal-header">
-    <h3 class="modal-title">Thank you!</h3>
-</div>
-<div class="modal-body">
+                </form>
 
-    <p>Thank you for contributing. Your transcription will help scientists and the public use our collections, and further our understanding of the natural world.</p>
-
-    <form role="form" class="form-inline jumbotron" ng-submit="send()" name="twitter">
-
-        <p>Please enter your twitter name below to receive a thank you tweet (and help spread the word about our work).</p>
-
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <!--autocomplete="off" -->
-            <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Your twitter username" required ng-model="formData.username"
-                   pattern="^\@([a-zA-Z_0-9]){1,}" title="Please enter your twitter username. This should start with @ and be between 1 and 20 characters.">
+            </div>
+            <div ng-switch-default>
+                NOT LOGGED IN
+            </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-lg"><i class="fa fa-twitter"></i> Tweet me</button>
 
-    </form>
+    </div>
+    <div class="modal-footer">
+        <a href="/" class="btn btn-success btn-xlg text-center center-block" role="button" ng-click="close()"><i class="fa fa-chevron-circle-right"></i> Next specimen</a>
+    </div>
 
-</div>
-<div class="modal-footer">
-    <a href="/" class="btn btn-success btn-xlg text-center center-block" role="button" ng-click="close()"><i class="fa fa-chevron-circle-right"></i> Next specimen</a>
 </div>
