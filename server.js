@@ -40,7 +40,7 @@
     // routes ==================================================
     require('./app/routes/specimens')(app);
     require('./app/routes/twitter')(app);
-    require('./app/routes/login')(app, passport);
+    require('./app/routes/auth')(app, passport);
     require('./app/routes/index')(app);
 
     // start app ===============================================
