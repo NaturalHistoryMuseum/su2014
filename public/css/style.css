@@ -200,11 +200,11 @@ margin-bottom: 50px;
     line-height: 1.4;
 }
 
-.twitter form.jumbotron{
+.twitter .jumbotron{
     padding: 25px 15px;
     margin-bottom: 0;
 }
 
-.twitter form.jumbotron p{
+.twitter .jumbotron p{
     font-size: 16px;
 }

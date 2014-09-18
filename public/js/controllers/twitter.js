@@ -1,9 +1,11 @@
-angular.module('twitterController', []).controller('twitterController', function($scope, $http, $route, $modalInstance, specimen, $cookies) {
+angular.module('twitterController', []).controller('twitterController', function($scope, $http, $route, $cookies, $modalInstance, specimen) {
 
     // Form placeholder
     $scope.formData = {};
 
-    $scope.informaticiansAuthName = ($cookies.username == 'informaticians');
+    $scope.informaticiansAuthName = ('su2014-key' in $cookies);
+
+    $scope.tweet = encodeURI('I have just transcribed @nhm_london specimen ' + specimen.flickrURL) + '%20%23su2014';
 
     $scope.send = function() {
 
