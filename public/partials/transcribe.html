@@ -1,8 +1,8 @@
 <a id="skip" href="/" ng-click="reload()"><i class="fa fa-chevron-circle-right"></i></a>
 
 <div id="specimen" class="row">
-    <div class="col-xs-12">
-        <img class="img-responsive" src="{{ specimen.url }}"/>
+    <div panzoom>
+        <img src="{{ specimen.url }}"  />
     </div>
 </div>
 
@@ -13,19 +13,19 @@
         <wizard on-finish="saveTranscription()" current-step="step">
 
             <!-- Identifier (BMNH) -->
-            <wz-step title="BM Number">
+            <wz-step title="Specimen number">
                 <div class="col-xs-3 label-col">
-                    <label for="identifier">BMNH(E) number:</label>
+                    <label for="identifier">Specimen number:</label>
                     <i title="Show help text" class="fa fa-info-circle" ng-click="showHelp(step)"></i>
                 </div>
 
                 <div class="col-xs-6">
-                    <input id="identifier" type="text" class="form-control input-lg" ng-model="formData.identifier">
+                    <input id="identifier" type="text" class="form-control input-lg" autocomplete="off" ng-model="formData.identifier" onfocus="return false">
                 </div>
 
                 <div class="col-xs-3">
                     <div class="btn-toolbar">
-                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
+                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Next</button>
                     </div>
                 </div>
             </wz-step>
@@ -38,12 +38,12 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <input id="name" type="text" class="form-control input-lg" ng-model="formData.name">
+                    <input id="name" type="text" class="form-control input-lg" autocomplete="off" ng-model="formData.scientificName">
                 </div>
 
                 <div class="col-xs-3">
                     <div class="btn-toolbar">
-                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
+                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Next</button>
                     </div>
                 </div>
             </wz-step>
@@ -56,12 +56,12 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <input id="locality" type="text" class="form-control input-lg" ng-model="formData.locality">
+                    <input id="locality" type="text" class="form-control input-lg" autocomplete="off" ng-model="formData.locality">
                 </div>
 
                 <div class="col-xs-3">
                     <div class="btn-toolbar">
-                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
+                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Next</button>
                     </div>
                 </div>
             </wz-step>
@@ -74,12 +74,20 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <select id="type-status" multi-select input-model="typeStatuses" button-label="name" item-label="name" tick-property="ticked" helper-elements="" default-label="None"></select>
+
+                    <select id="type-status" class="multi-select" multi-select input-model="typeStatuses" button-label="name" item-label="name" tick-property="ticked" helper-elements="" default-label="None"></select>
+
+                    <select id="type-status" ng-model="formData.typeStatus" class="default-select" multiple="multiple">
+                        <option ng-repeat="typeStatus in typeStatuses">
+                            {{ typeStatus.name }}
+                        </option>
+                    </select>
+
                 </div>
 
                 <div class="col-xs-3">
                     <div class="btn-toolbar">
-                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
+                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Next</button>
                     </div>
                 </div>
             </wz-step>
@@ -92,12 +100,12 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <input id="collector" type="text" class="form-control input-lg" ng-model="formData.collector">
+                    <input id="collector" type="text" class="form-control input-lg" autocomplete="off" ng-model="formData.collector">
                 </div>
 
                 <div class="col-xs-3">
                     <div class="btn-toolbar">
-                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Continue</button>
+                        <button class="btn btn-success btn-lg" type="submit" wz-next><i class="fa fa-chevron-circle-right"></i> Next</button>
                     </div>
                 </div>
             </wz-step>
@@ -110,7 +118,7 @@
                 </div>
 
                 <div class="col-xs-6">
-                    <input id="collection-date" type="text" class="form-control input-lg" ng-model="formData.collectionDate">
+                    <input id="collection-date" type="text" class="form-control input-lg" autocomplete="off" ng-model="formData.collectionDate">
                 </div>
 
                 <div class="col-xs-3">
