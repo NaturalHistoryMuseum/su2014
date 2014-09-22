@@ -1,0 +1,42 @@
+body{
+    font-size: 10px;
+}
+
+div#footer{
+    height: 5em;
+}
+.steps-indicator{
+    display: none;
+}
+
+/* Form */
+.input-lg{
+    height: 22px;
+    font-size: 8px;
+    line-height: 1;
+    font-size: 1em;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+ /*Disable zoom in iPhone - it's really annoying on small screens*/
+ @media screen and (-webkit-min-device-pixel-ratio:0) {
+ select:focus, textarea:focus, input:focus {
+ font-size: 16px;
+ background: #fff;
+  }
+ }
+
+.btn-lg{
+    padding: 0.3em 0.4em;
+    font-size: 1em;
+}
+
+ /* Use the real multi select for iphone */
+.multi-select{
+    display: none;
+}
+
+select.default-select{
+    display: block;
+}
