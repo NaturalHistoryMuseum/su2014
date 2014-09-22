@@ -37,7 +37,7 @@ module.exports = function(app) {
     app.post('/api/specimen', function(req, res) {
 
         var transcriptionData = req.body
-        transcriptionData['created'] = Date.now()
+        transcriptionData['created'] = Date.now();
 
         mongoose.model('specimens').update({'_id': req.body._id}, { $push : {transcriptions: transcriptionData}}, function(err, data){
             if (err)
