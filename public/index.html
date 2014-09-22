@@ -4,19 +4,26 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+        <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width,user-scalable=no" />
+
         <base href="/">
 
         <title>Science Uncovered 2014</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
-        <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css"> <!-- custom styles -->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css"/>
+
+        <link rel="stylesheet" href="css/style.css"/> <!-- custom styles -->
+        <link rel="stylesheet" href="css/mobile.css" media="handheld, only screen and (max-device-width:480px)"/> <!-- mobile styles -->
 
         <!-- JS -->
         <script src="libs/angular/angular.min.js"></script>
         <script src="libs/angular-route/angular-route.min.js"></script>
+        <script src="libs/jquery/dist/jquery.js"></script>
+        <script src="libs/jquery.panzoom/dist/jquery.panzoom.js"></script>
+        <script src="libs/jquery.doubletap/lib/jquery.doubletap.js"></script>
 
         <!-- BOOTSTRAP CUSTOM-->
         <script type="text/javascript" src="libs/angular-multi-select/angular-multi-select.js"></script>
@@ -36,13 +43,13 @@
         <script src="js/controllers/transcription.js"></script>
         <script src="js/controllers/twitter.js"></script>
         <script src="js/controllers/help.js"></script>
-
+        <script src="js/directives/panzoom.js"></script>
 
     </head>
 
     <body ng-app="su2014App" ng-csp>
 
-        <div id="branding"><img class="logo" src="img/logo-black.png" title="Natural History Museum" />Science Uncovered 2014</div>
+        <div id="branding"><img class="logo" src="img/logo-black.png" title="Natural History Museum" />Science<br />Uncovered<br />2014</div>
 
         <!-- ANGULAR DYNAMIC CONTENT -->
         <div class="container-full">

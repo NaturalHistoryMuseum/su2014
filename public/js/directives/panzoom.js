@@ -16,10 +16,8 @@ angular.module('panzoom', []).directive('panzoom', function() {
             $(element).find('img').load(function() {
 
                 var $img = $(element).find('img')
-
                 $img.css('height', $(this).height() + 'px');
                 $img.css('max-height', 'none');
-
 
             });
 

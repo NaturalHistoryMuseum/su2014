@@ -8,6 +8,7 @@ angular.module('su2014App', [
     'multi-select',
     'transcriptionController',
     'twitterController',
-    'modalHelpController'
+    'modalHelpController',
+    'panzoom'
 ]);
 
