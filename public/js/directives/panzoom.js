@@ -5,29 +5,32 @@ angular.module('panzoom', []).directive('panzoom', function() {
         // responsible for registering DOM listeners as well as updating the DOM
         link: function(scope, element) {
 
+            var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+            var is_android = navigator.platform.toLowerCase().indexOf("android") > -1;
+
             $(element).panzoom({
                 minScale: 1
             });
 
-//            TODO: Zoom out
+            var $img = $(element).find('img');
 
-            console.log($(element).find('img').clientHeight)
-
-            $(element).find('img').load(function() {
-
-                var $img = $(element).find('img')
-                $img.css('height', $(this).height() + 'px');
-                $img.css('max-height', 'none');
-
-            });
-
-            $(element).find('img').addSwipeEvents().bind('doubletap', function(evt, touch) {
+            $img.addSwipeEvents().bind('doubletap', function(evt, touch) {
                 $(element).panzoom("zoom", {
                      focal: touch.touch,
                      animate: true,
                      increment: 0.5
                 });
             });
+
+            // Horrible hack: Firefox on Android resets window size when you start typing - so fix image size onload()
+            if(is_firefox && is_android){
+                $img.load(function() {
+                    var $img = $(element).find('img')
+                    $img.css('height', $(this).height() + 'px');
+                    $img.css('max-height', 'none');
+                });
+
+            }
 
         }
     };
