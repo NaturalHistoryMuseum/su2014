@@ -1,20 +1,24 @@
+/* iPads */
 body{
-    background: #FFFEFE;
+    font-size: 20px;
 }
 
 #branding{
-    width: 70px;
+    width: 5em;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0.7em;
+    left: 0.5em;
     text-align: center;
     line-height: 1.1;
     z-index: 101;
     opacity: 0.8;
+    font-size: 0.7em;
 }
 
 #branding img{
-    margin-bottom: 5px;
+    margin: 0 auto 0.3em;
+    display: block;
+    width: 2em;
 }
 
 a#skip{
@@ -28,19 +32,24 @@ a#skip{
 a#skip i{
     color: #000000;
     opacity: 0.6;
-    font-size: 40px;
-    width: 40px;
+    font-size: 2em;
+    width: 1em;
 }
 
 a#skip:hover i{
     opacity: 0.8;
 }
 
+div#specimen{
+    text-align: center;
+}
+
 div#specimen img{
-    height: auto;
     max-height: 100%;
     min-height: 100%;
+
     max-width: 100%;
+
     padding-bottom: 140px;
     margin: auto;
 }
@@ -48,7 +57,7 @@ div#specimen img{
 div#footer{
     position: fixed;
     bottom: 0;
-    height: 140px;
+    height: 7em;
     background: #eee;
     width: 100%;
     margin: 0;
@@ -56,7 +65,7 @@ div#footer{
 }
 
 form#transcription{
-    margin-top: 24px;
+    margin-top: 1.2em;
 }
 
 form#transcription .label-col{
@@ -66,16 +75,22 @@ form#transcription .label-col{
 form#transcription .label-col label{
     display: inline-block;
     text-align: right;
-    font-size: 30px;
+    font-size: 1em;
+    padding-right: 0.7em;
+}
+
+form#transcription .input-lg{
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
 /* Help text */
 form#transcription .label-col i{
-    font-size: 24px;
+    font-size: 1.3em;
     color: #3476BE;
-    position: relative;
-    top: -12px;
-    left: 5px;
+    position: absolute;
+    top: -5px;
+    right: 0;
     cursor: pointer;
 }
 
@@ -83,11 +98,15 @@ div.checkboxLayer{
     bottom: 60px!important;
 }
 
+select.default-select{
+    display: none;
+}
+
 .multiSelect .button{
-    font-size: 18px!important;
-    min-width: 200px;
+    font-size: 1em!important;
+    min-width: 10em;
     line-height: 1.33;
-    padding: 10px 16px!important;
+    padding: 0.3em 0.3em!important;
 }
 
 .multiSelect .button .buttonLabel{
@@ -116,7 +135,7 @@ span.tickMark{
 /* Steps */
 
 button i{
-    margin-right: 4px;
+    margin-right: 0.1em;
 }
 
 .steps-indicator {
@@ -163,7 +182,7 @@ button i{
     -webkit-font-smoothing: antialiased;
     display: inline-block;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 14px!important;
     color: #339933!important;
     height: 16px!important;
     width: 16px!important;
@@ -173,13 +192,13 @@ button i{
 /* Twitter */
 
 .btn-xlg, .btn-group-xlg>.btn {
-padding: 14px 20px;
-font-size: 22px;
+padding: 0.5em 0.5em;
+font-size: 1em;
 line-height: 1.33;
 border-radius: 9px;
 width: 40%;
-margin-top: 30px;
-margin-bottom: 50px;
+margin-top: 1em;
+margin-bottom: 2em;
 }
 
 .modal-footer {
@@ -192,19 +211,18 @@ margin-bottom: 50px;
 }
 
 .twitter h3{
-    font-size: 20px;
+    font-size: 1.1em;
     color: #666;
-    font-size: 21px;
     font-weight: 200;
-    margin: 0 0 30px 0;
+    margin: 0 0 1em 0;
     line-height: 1.4;
 }
 
 .twitter .jumbotron{
-    padding: 25px 15px;
+    padding: 1.1em 0.6em 1.5em 0.6em;
     margin-bottom: 0;
 }
 
 .twitter .jumbotron p{
-    font-size: 16px;
+    font-size: 1em;
 }
