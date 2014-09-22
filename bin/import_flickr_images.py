@@ -65,8 +65,9 @@ def import_flickr_images():
         if photo['id'] not in existing_images:
 
             record = dict(
-                _id=int(photo['id']),
-                flickrURL='http://www.flickr.com/photos/' + photo['pathalias'] + '/' + photo['id']
+                _id=photo['id'],
+                flickrURL='http://www.flickr.com/photos/' + photo['pathalias'] + '/' + photo['id'],
+                dateAdded=photo['dateadded']
             )
 
             # Not all photos have url_l - if not use the original
