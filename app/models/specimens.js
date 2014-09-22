@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var transcriptionSchema = new Schema({
     identifier: String,
     scientificName: String,
-    location: String,
+    locality: String,
     typeStatus: String,
     collector: String,
     collectionDate: String,
