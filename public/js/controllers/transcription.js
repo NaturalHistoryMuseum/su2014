@@ -26,20 +26,30 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
 
     $scope.saveTranscription = function(){
 
-        console.log($scope.specimen);
+        var typeStatus = []
 
-//        // Set the specimen ID
-//        $scope.formData['_id'] = $scope.specimen['_id']
-//
-//        // And post the data back to the node API
-//		$http.post('/api/specimen', $scope.formData)
-//			.success(function(data) {
-//                console.log('Success: record saved');
-//			})
-//			.error(function(data) {
-//                // We'll just log the error - on the night we do not want to reveal any errors
-//				console.log('Error: ' + data);
-//			});
+        angular.forEach( $scope.typeStatuses, function( value, key ) {
+            if ( value.ticked === true ) {
+                typeStatus.push(value.name);
+            }
+        });
+
+        if (typeStatus.length){
+            $scope.formData['typeStatus'] = typeStatus
+        }
+
+        // Set the specimen ID
+        $scope.formData['_id'] = $scope.specimen['_id']
+
+        // And post the data back to the node API
+		$http.post('/api/specimen', $scope.formData)
+			.success(function(data) {
+                console.log('Success: record saved');
+			})
+			.error(function(data) {
+                // We'll just log the error - on the night we do not want to reveal any errors
+				console.log('Error: ' + data);
+			});
 
         $modal.open({
           templateUrl: '/partials/twitter.html',
