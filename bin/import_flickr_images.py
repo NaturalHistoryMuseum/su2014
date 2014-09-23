@@ -11,8 +11,9 @@ from flickr_api.api import flickr
 
 FLICKR_API_KEY = '3608750bb8733644f1b6b0ea75602330'
 FLICKR_API_SECRET = '3399d3a72bf1023c'
-FLICKR_GROUP_ID = '2687808@N24'
+FLICKR_USER_ID = '53906044@N04'
 FLICKR_PER_PAGE = 10
+FLICKR_TAG = 'SU2014'
 
 MONGO_DB = 'su2014'
 MONGO_COLLECTION = 'specimens'
@@ -43,8 +44,9 @@ def import_flickr_images():
 
     print 'Loading flickr images for page %s' % current_page
 
-    response = json.loads(flickr.groups.pools.getPhotos(
-        group_id=FLICKR_GROUP_ID,
+    response = json.loads(flickr.photos.search(
+        user_id=FLICKR_USER_ID,
+        tags=FLICKR_TAG,
         format='json',
         nojsoncallback=1,
         per_page=FLICKR_PER_PAGE,
@@ -66,8 +68,7 @@ def import_flickr_images():
 
             record = dict(
                 _id=photo['id'],
-                flickrURL='http://www.flickr.com/photos/' + photo['pathalias'] + '/' + photo['id'],
-                dateAdded=photo['dateadded']
+                flickrURL='http://www.flickr.com/photos/' + photo['pathalias'] + '/' + photo['id']
             )
 
             # Not all photos have url_l - if not use the original
