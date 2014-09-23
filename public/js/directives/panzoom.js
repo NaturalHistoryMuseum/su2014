@@ -22,15 +22,15 @@ angular.module('panzoom', []).directive('panzoom', function() {
                 });
             });
 
-            // Horrible hack: Firefox on Android resets window size when you start typing - so fix image size onload()
-            if(is_firefox && is_android){
-                $img.load(function() {
-                    var $img = $(element).find('img')
-                    $img.css('height', $(this).height() + 'px');
-                    $img.css('max-height', 'none');
-                });
-
-            }
+//            // Horrible hack: Firefox on Android resets window size when you start typing - so fix image size onload()
+//            if(is_firefox && is_android){
+//                $img.load(function() {
+//                    var $img = $(element).find('img')
+//                    $img.css('height', $(this).height() + 'px');
+//                    $img.css('max-height', 'none');
+//                });
+//
+//            }
 
         }
     };
