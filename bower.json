@@ -10,7 +10,6 @@
     "angular-wizard": "latest",
     "angular-bootstrap": "latest",
     "angular-multi-select": "latest",
-    "jquery.doubletap": "latest",
     "jquery.panzoom": "latest"
   }
 }
