@@ -23,8 +23,7 @@
                         <!--autocomplete="off" -->
                         <input type="text" class="form-control input-lg" name="username" id="username" placeholder="Your twitter username" ng-model="formData.username" ng-minlength="2" ng-maxlength="20" required ng-pattern="/^\@([a-zA-Z0-9])+/">
                     </div>
-
-                    <button type="submit" class="btn btn-primary btn-lg" ng-disabled="twitterform.$invalid"><i class="fa fa-twitter"></i> Tweet me</button>
+                    <input type="submit" class="btn btn-primary btn-lg" ng-disabled="twitterform.$invalid" value="Tweet me">
 
                 </form>
 
@@ -40,7 +39,7 @@
 
     </div>
     <div class="modal-footer">
-        <a href="/" class="btn btn-success btn-xlg text-center center-block" role="button" ng-click="close()"><i class="fa fa-chevron-circle-right"></i> Next specimen</a>
+        <a href="/" class="btn btn-success btn-xlg text-center center-block" role="button" ng-click="close()">Next specimen</a>
     </div>
 
 </div>
