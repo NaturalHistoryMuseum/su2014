@@ -39,7 +39,7 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
         }
 
         // Set the specimen ID
-        $scope.formData['_id'] = $scope.specimen['_id']
+        $scope.formData['specimen'] = $scope.specimen
 
         // And post the data back to the node API
 		$http.post('/api/specimen', $scope.formData)
