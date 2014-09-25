@@ -58,7 +58,8 @@ module.exports = function (app) {
         // Create object to save to the datastore
         var datastore_dict = {
             resource_id: ckan_keys.resourceID,
-            records: [transcriptionData]
+            records: [transcriptionData],
+            method: 'insert'
         }
 
         var headers = {
@@ -66,17 +67,16 @@ module.exports = function (app) {
         }
 
         request({
-            url: ckan_keys.url + '/api/3/action/datastore_create',
+            url: ckan_keys.url + '/api/3/action/datastore_upsert',
             method: "POST",
             json: datastore_dict,
             headers: headers
         }, function _callback(err, res, body) {
-            var result = body;
 
-            if (res.statusCode == 400) {
+            if (res.statusCode != 200) {
+                console.log('ERROR: Record could not be added to data portal')
                 console.log(body);
             }
-
 
         });
 
