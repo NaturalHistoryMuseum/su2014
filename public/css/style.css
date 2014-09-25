@@ -44,12 +44,16 @@ div#specimen{
     text-align: center;
 }
 
+div.panzoom{
+	height: 100%!important;
+}
+
 div#specimen img{
-	height: 100%;
-	width: 100%;
+    min-height: 100%;
+	max-height: 100%;
+	max-width: 100%;
 	object-fit: contain;
     padding-bottom: 140px;
-    margin: auto;
 }
 
 div#footer{
