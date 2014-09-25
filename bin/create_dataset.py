@@ -13,24 +13,22 @@ from ConfigParser import ConfigParser
 config = ConfigParser()
 config.read(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'config.cfg'))
 
-
-
-
-
 def main():
 
     ckan = ckanapi.RemoteCKAN(config.get('ckan', 'site_url'), apikey=config.get('ckan', 'api_key'))
 
     package = {
-        'name': 'crowdsourcing-the-collection',
-        'notes': u'Transcriptions created live at Science Uncovered 2014 ',
-        'title': "Crowdsourcing the collection",
+        'name': 'su2014',
+        'notes': u'Live transcriptions from Science Uncovered 2014',
+        'title': "Crowdsourcing the Collection",
         'author': 'Science Uncovered visitors',
         'license_id': u'cc-by',
         'resources': [],
         'dataset_type': 'Specimen',
-        'owner_org': 'nhm'
+        'owner_org': config.get('ckan', 'owner_org')
     }
+
+    fields = ['flickr_id', 'image_url', 'identifier', 'scientificName', 'locality', 'typeStatus', 'collector', 'collectionDate', 'created']
 
     try:
         # If the package exists, retrieve the resource
@@ -45,6 +43,7 @@ def main():
         # And create the datastore
 
         datastore = {
+            'fields': [{'id': f, 'type': 'text'} for f in fields],
             'resource': {
                 'name': 'Transcriptions',
                 'description': 'Transcriptions data',
