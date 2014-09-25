@@ -48,7 +48,7 @@ module.exports = function (app) {
         var ckan_keys = require('../../config/ckan');
         var request = require("request");
 
-        transcriptionData['flickr_id'] = 'flickr:' + req.body.specimen._id
+        transcriptionData['flickr_id'] = req.body.specimen._id
         transcriptionData['image_url'] = req.body.specimen.url
         console.log(transcriptionData);
 
