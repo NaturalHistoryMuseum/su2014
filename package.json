@@ -16,6 +16,7 @@
     "express-session": "~1.0.0",
     "bcrypt-nodejs" : "latest",
     "bower": "latest",
-    "request": "latest"
+    "request": "latest",
+    "auth": "latest"
     }
 }
