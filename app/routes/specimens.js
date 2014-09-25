@@ -66,7 +66,7 @@ module.exports = function (app) {
         }
 
         request({
-            url: ckan_keys.url + '/api/3/action/datastore_creates',
+            url: ckan_keys.url + '/api/3/action/datastore_create',
             method: "POST",
             json: datastore_dict,
             headers: headers
