@@ -102,10 +102,7 @@ form#transcription .btn-toolbar button{
 }
 
 form#transcription button.skip i{
-    font-size: 0.8em;
-    font-weight: 200;
-    position: relative;
-    top: -1px;
+    display: none;
 }
 
 div.checkboxLayer{

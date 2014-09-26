@@ -40,3 +40,20 @@ div#footer{
 select.default-select{
     display: block;
 }
+
+form#transcription .btn-toolbar button{
+    min-width: 0;
+    font-size: 0.9em;
+}
+
+form#transcription button.skip i{
+    display: inline;
+}
+
+form#transcription button.skip span{
+    display: none;
+}
+
+form#transcription button.save span{
+    display: none;
+}
