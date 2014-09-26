@@ -47,10 +47,14 @@ module.exports = function (app) {
 
         transcriptionData['flickr_id'] = req.body.specimen._id
         transcriptionData['image_url'] = req.body.specimen.url
-        console.log(transcriptionData);
 
         // Delete the specimen part of the body
         delete transcriptionData.specimen;
+
+        // Convert type status to string so datastore doesn't freak out
+        if ('typeStatus' in transcriptionData){
+            transcriptionData['typeStatus'] = transcriptionData['typeStatus'].join(',');
+        }
 
         // Create object to save to the datastore
         var datastore_dict = {
@@ -63,6 +67,8 @@ module.exports = function (app) {
             'Authorization': ckan_keys.apiKey
         }
 
+        console.log('Saving to datastore')
+
         request({
             url: ckan_keys.url + '/api/3/action/datastore_upsert',
             method: "POST",
@@ -71,7 +77,8 @@ module.exports = function (app) {
         }, function _callback(err, res, body) {
 
             if (res.statusCode != 200) {
-                res.send('ERROR: Record could not be added to data portal');
+                console.log('ERROR: Record could not be sent to data portal');
+                console.log(body);
             }
 
         });
