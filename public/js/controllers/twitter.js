@@ -5,7 +5,7 @@ angular.module('twitterController', []).controller('twitterController', function
 
     $scope.informaticiansAuthName = ('su2014-key' in $cookies);
 
-    $scope.tweet = encodeURI('I have just transcribed @nhm_london specimen ' + specimen.flickrURL) + '%20%23su2014';
+    $scope.tweet = encodeURI('I have just transcribed @nhm_london specimen ' + specimen.flickrURL) + '%20%23SU2014';
 
     $scope.send = function() {
 
