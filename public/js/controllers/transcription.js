@@ -16,6 +16,12 @@ angular.module('transcriptionController', []).controller('transcriptionControlle
         $route.reload();
     }
 
+    // Do not want the keyboard to keep sliding in and out, and I cannot set focus on hidden element
+    // So set focus to dummy element
+    $scope.keepFormFocus = function(){
+        $('input#dummy-focus').focus();
+    }
+
     $scope.typeStatuses = [
         { name: "Type"},
         { name: "Cotype"},

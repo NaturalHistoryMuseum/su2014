@@ -243,3 +243,9 @@ margin-bottom: 2em;
 .twitter .jumbotron p{
     font-size: 1em;
 }
+
+#dummy-focus{
+    position: absolute;
+    left: -200px;
+    width: 1px;
+}
