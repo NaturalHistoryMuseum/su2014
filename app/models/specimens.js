@@ -15,7 +15,8 @@ var transcriptionSchema = new Schema({
 var specimensSchema = new Schema({
     _id: String,
     url: String,
-    transcriptions: [transcriptionSchema]
+    transcriptions: [transcriptionSchema],
+    numTranscriptions: Number
 })
 
 mongoose.model('specimens', specimensSchema)

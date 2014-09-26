@@ -5,13 +5,10 @@ module.exports = function (app) {
     // Get one specimen
     app.get('/api/specimen', function (req, res) {
 
-        // TODO: Order by transcription count and skip count
-        // FIXME: This potentially could mean skipping some specimens. Get minimum count? Mean you'll be stuck on records? Weight rand to lower regions? Pointless?
         console.log('Loading specimen image')
 
         // Get 20 specimens with the lowest number of transcriptions
-
-        mongoose.model('specimens').find({}, null, {limit: 40, sort: {'name': 1}}, function (err, specimens) {
+        mongoose.model('specimens').find({}, null, {limit: 20, sort: {'numTranscriptions': 1}}, function (err, specimens) {
 
             // We want to return a random specimen from the 40 returned
             // So we hopefully won't have multiple people working on the same one at the same time
@@ -39,7 +36,7 @@ module.exports = function (app) {
 
         transcriptionData['created'] = new Date();
 
-        mongoose.model('specimens').update({'_id': req.body.specimen._id}, { $push: {transcriptions: transcriptionData}}, function (err, data) {
+        mongoose.model('specimens').update({'_id': req.body.specimen._id}, { $push: {transcriptions: transcriptionData}, $inc: {numTranscriptions: 1}}, function (err, data) {
             if (err)
                 console.log('Error saving transcription' + err);
         });
