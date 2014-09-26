@@ -24,7 +24,7 @@ module.exports = function (app) {
                 "HMAC-SHA1"
             );
 
-            var status = '.' + data.username + ' has just transcribed @nhm_london specimen ' + data.flickrURL + ' #su2014'
+            var status = '.' + data.username + ' has just transcribed @nhm_london specimen ' + data.flickrURL + ' #SU2014'
 
             var body = ({'status': status});
 
