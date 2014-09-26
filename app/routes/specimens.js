@@ -74,13 +74,14 @@ module.exports = function (app) {
         }, function _callback(err, res, body) {
 
             if (res.statusCode != 200) {
-                console.log('ERROR: Record could not be added to data portal')
-                console.log(body);
+                res.send('ERROR: Record could not be added to data portal');
             }
 
         });
 
         console.log('Transcription saved')
+
+        res.json({'status': 1})
 
     });
 
