@@ -8,7 +8,6 @@ module.exports = function (app) {
         if (bcrypt.compareSync('informaticians', req.cookies['su2014-key'])) {
 
             var data = req.body
-//            data.username = "@benjaminscott"
 
             var keys = require('../../config/twitter-auth');
 
