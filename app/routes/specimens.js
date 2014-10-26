@@ -67,23 +67,23 @@ module.exports = function (app) {
             'Authorization': ckan_keys.apiKey
         }
 
-        console.log('Saving to datastore')
-
-        request({
-            url: ckan_keys.url + '/api/3/action/datastore_upsert',
-            method: "POST",
-            json: datastore_dict,
-            headers: headers
-        }, function _callback(err, res, body) {
-
-            if (res.statusCode != 200) {
-                console.log('ERROR: Record could not be sent to data portal');
-                console.log(body);
-            }
-
-        });
-
-        console.log('Transcription saved')
+//        console.log('Saving to datastore')
+//
+//        request({
+//            url: ckan_keys.url + '/api/3/action/datastore_upsert',
+//            method: "POST",
+//            json: datastore_dict,
+//            headers: headers
+//        }, function _callback(err, res, body) {
+//
+//            if (res.statusCode != 200) {
+//                console.log('ERROR: Record could not be sent to data portal');
+//                console.log(body);
+//            }
+//
+//        });
+//
+//        console.log('Transcription saved')
 
         res.json({'status': 1})
 
