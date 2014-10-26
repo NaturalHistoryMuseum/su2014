@@ -2,8 +2,7 @@ node_modules
 dist
 .tmp
 .sass-cache
-lib/*
-config/*
+public/libs
 *.cfg
 *.log
 .env
