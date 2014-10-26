@@ -13,11 +13,10 @@
 
 	// configuration =================
 
-    var db = require('./config/db');
-
 	var port = process.env.PORT || 8080; // set our port
 
-    mongoose.connect(db.url); // connect to our mongoDB database (uncomment after you enter in your own credentials in config/db.js)
+    // connect to our mongoDB database
+    mongoose.connect(process.env.MONGO_URL);
 
     // Models =================
     require('./app/models/specimens')
@@ -35,7 +34,7 @@
     app.use(passport.initialize());
     app.use(passport.session()); // persistent login sessions
 
-    require('./config/passport')(passport);
+//    require('./config/passport')(passport);
 
     // routes ==================================================
     require('./app/routes/specimens')(app);
