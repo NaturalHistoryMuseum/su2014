@@ -18,5 +18,10 @@
     "bower": "latest",
     "request": "latest",
     "auth": "latest"
+    },
+    "scripts": {
+        "postinstall": "./node_modules/bower/bin/bower install"
     }
 }
+
+
