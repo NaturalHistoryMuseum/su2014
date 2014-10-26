@@ -42,7 +42,6 @@ module.exports = function (app) {
         });
 
         // And save to portal
-        var ckan_keys = require('../../config/ckan');
         var request = require("request");
 
         transcriptionData['flickr_id'] = req.body.specimen._id
@@ -58,19 +57,19 @@ module.exports = function (app) {
 
         // Create object to save to the datastore
         var datastore_dict = {
-            resource_id: ckan_keys.resourceID,
+            resource_id: process.env.CKAN_RESOURCE_ID,
             records: [transcriptionData],
             method: 'insert'
         }
 
         var headers = {
-            'Authorization': ckan_keys.apiKey
+            'Authorization': process.env.CKAN_API_KEY
         }
 
 //        console.log('Saving to datastore')
 //
 //        request({
-//            url: ckan_keys.url + '/api/3/action/datastore_upsert',
+//            url: process.env.CKAN_URL + '/api/3/action/datastore_upsert',
 //            method: "POST",
 //            json: datastore_dict,
 //            headers: headers
