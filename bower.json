@@ -11,6 +11,7 @@
     "angular-bootstrap": "latest",
     "angular-multi-select": "latest",
     "angular-cookies": "latest",
-    "jquery.panzoom": "latest"
+    "jquery.panzoom": "latest",
+    "jquery.doubletap": "https://github.com/technoweenie/jquery.doubletap"
   }
 }
