@@ -2,16 +2,16 @@
   "name": "su2014",
   "version": "1.0.0",
   "dependencies": {
-    "bootstrap": "latest",
+    "bootstrap": "3.2.0",
     "font-awesome": "latest",
     "animate.css": "latest",
-    "angular": "latest",
-    "angular-route": "latest",
-    "angular-wizard": "latest",
-    "angular-bootstrap": "latest",
-    "angular-multi-select": "latest",
-    "angular-cookies": "latest",
-    "jquery.panzoom": "latest",
+    "angular": "1.3.0",
+    "angular-route": "1.3.0",
+    "angular-wizard": "0.4.0",
+    "angular-bootstrap": "0.11.2",
+    "angular-multi-select": "2.0.2",
+    "angular-cookies": "1.3.0",
+    "jquery.panzoom": "2.0.5",
     "jquery.doubletap": "https://github.com/technoweenie/jquery.doubletap.git"
   }
 }
